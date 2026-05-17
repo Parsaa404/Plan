@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, type FormEvent } from "react";
 import { initializeApp } from "firebase/app";
 import { getFirestore, doc, onSnapshot, setDoc } from "firebase/firestore";
+import logoSrc from "./assets/logo.png";
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -406,6 +407,7 @@ const TABS = [
   { id: "services", icon: "🐾", fa: "خدمات جدید", en: "Services", color: C.green },
   { id: "marketing", icon: "📣", fa: "مارکتینگ", en: "Marketing", color: C.gold },
   { id: "trust", icon: "🤝", fa: "اعتمادسازی", en: "Trust", color: C.blue },
+  { id: "instagram", icon: "📱", fa: "اینستاگرام", en: "Instagram", color: C.purple },
   { id: "tasks", icon: "✅", fa: "وظایف تو", en: "Your Tasks", color: C.rose },
   { id: "priority", icon: "🎯", fa: "اولویت‌ها", en: "Priorities", color: C.purple },
   { id: "checklist", icon: "☑️", fa: "چک‌لیست", en: "Checklist", color: C.orange },
@@ -563,6 +565,115 @@ function TrustSection({ lang }: { lang: "fa" | "en" }) {
           </div>
         </SectionCard>
       ))}
+    </div>
+  );
+}
+
+function InstagramSection({ lang }: { lang: "fa" | "en" }) {
+  const t = useT(lang);
+  const isFa = lang === "fa";
+  const rows = [
+    {
+      icon: "🔴", titleFa: "کپشن‌های AI را فوری حذف کن", titleEn: "Remove pasted AI captions immediately",
+      descFa: "اگر در کپشن برچسب یا label می‌بینی، آن را پاک کن و متن را طبیعی کن.",
+      descEn: "If the caption contains labels or AI tags, remove them and make the copy feel natural."
+    },
+    {
+      icon: "🟢", titleFa: "لینک بیو را واتس‌اپ کن", titleEn: "Change bio link to WhatsApp",
+      descFa: "بیو باید حرفه‌ای و مستقیم باشد: Book via WhatsApp 🐾.",
+      descEn: "The bio must be professional and direct: Book via WhatsApp 🐾."
+    },
+    {
+      icon: "📌", titleFa: "پست‌های پین‌شده را مرتب کن", titleEn: "Reorder pinned posts",
+      descFa: "فایلرهای پین‌شده را بردار و یک Reel واقعی با سگ مهمان روی پیج نگه دار.",
+      descEn: "Unpin flyers and keep a real dog Reel pinned instead."
+    },
+    {
+      icon: "🎥", titleFa: "Reel های واقعی بیشتر بساز", titleEn: "Create more real Reels",
+      descFa: "هر هفته حداقل یک Reel با صاحب کسب‌وکار یا سگ مهمان داشته باش.",
+      descEn: "Post at least one Reel per week featuring the owner or a guest dog."
+    },
+    {
+      icon: "⭐", titleFa: "Pricing و Reviews را برجسته کن", titleEn: "Highlight Pricing and Reviews",
+      descFa: "هایلایت Pricing بساز و کاور Reviews را به استایل طلایی هماهنگ کن.",
+      descEn: "Add a Pricing highlight and style Reviews with the same gold visual language."
+    },
+  ];
+
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
+      <SectionCard>
+        <h3 style={{
+          fontFamily: isFa ? F.faDisplay : F.enDisplay,
+          fontSize: 22, margin: 0, color: C.purple
+        }}>
+          {t("اینستاگرام", "Instagram")}
+        </h3>
+        <p style={{
+          fontFamily: isFa ? F.faBody : F.enBody,
+          fontSize: 14, color: C.textMid, margin: "12px 0 0", lineHeight: 1.7,
+          direction: isFa ? "rtl" : "ltr", textAlign: isFa ? "right" : "left"
+        }}>
+          {t(
+            "این بخش راهنمای فوری برای صفحه اینستاگرام Paw Boutique است. تمرکز روی Reel واقعی، بیو حرفه‌ای و پست‌های پین‌شده درست است.",
+            "This section is a quick Instagram playbook for Paw Boutique. Focus on real Reels, a professional bio, and the right pinned content."
+          )}
+        </p>
+      </SectionCard>
+
+      <SectionCard style={{ padding: 22 }}>
+        <h4 style={{
+          fontFamily: isFa ? F.faDisplay : F.enDisplay,
+          fontSize: 18, margin: 0, color: C.green
+        }}>
+          {t("جمع‌بندی سریع", "Quick Instagram Summary")}
+        </h4>
+        <p style={{
+          fontFamily: isFa ? F.faBody : F.enBody,
+          fontSize: 13, color: C.textMid, margin: "12px 0 0", lineHeight: 1.75,
+          direction: isFa ? "rtl" : "ltr", textAlign: isFa ? "right" : "left"
+        }}>
+          {t(
+            "خبر خوب: Reel‌های واقعی دارید. مشکل این است که flyerها جلو تجربه اصلی پیج را می‌گیرند.",
+            "Good news: you already have real Reels. The issue is that flyers are hiding the page’s strongest content."
+          )}
+        </p>
+        <ul style={{
+          margin: "16px 0 0 18px", paddingLeft: 16,
+          fontFamily: isFa ? F.faBody : F.enBody,
+          fontSize: 13, color: C.text, lineHeight: 1.8,
+          direction: isFa ? "rtl" : "ltr"
+        }}>
+          <li>{t("کپشن boarding را همین امشب ویرایش کن.", "Edit the boarding caption tonight.")}</li>
+          <li>{t("لینک بیو را به واتس‌اپ مستقیم تغییر بده: Book via WhatsApp 🐾.", "Change the bio link to direct WhatsApp: Book via WhatsApp 🐾.")}</li>
+          <li>{t("دو flyer پین‌شده را بردار و یک Reel واقعی را پین کن.", "Unpin the flyer posts and pin a real Reel.")}</li>
+          <li>{t("قانون جدید: از هر ۵ پست، حداکثر ۱ flyer.", "New rule: max 1 flyer in every 5 posts.")}</li>
+          <li>{t("هایلایت Pricing اضافه کن و کاور Reviews را طلایی هماهنگ کن.", "Add a Pricing highlight and style Reviews with gold cover art.")}</li>
+        </ul>
+      </SectionCard>
+
+      <div style={{ display: "grid", gap: 12 }}>
+        {rows.map((row, index) => (
+          <SectionCard key={index} style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
+            <div style={{ fontSize: 24 }}>{row.icon}</div>
+            <div style={{ flex: 1 }}>
+              <p style={{
+                fontFamily: isFa ? F.faDisplay : F.enDisplay,
+                fontSize: 15, fontWeight: 700, margin: 0, color: C.text
+              }}>
+                {t(row.titleFa, row.titleEn)}
+              </p>
+              <p style={{
+                fontFamily: isFa ? F.faBody : F.enBody,
+                fontSize: 13.5, color: C.textMid, margin: "8px 0 0", lineHeight: 1.7,
+                direction: isFa ? "rtl" : "ltr", textAlign: isFa ? "right" : "left"
+              }}>
+                {t(row.descFa, row.descEn)}
+              </p>
+            </div>
+          </SectionCard>
+        ))}
+      </div>
     </div>
   );
 }
@@ -933,11 +1044,33 @@ function ChecklistSection({ lang }: { lang: "fa" | "en" }) {
 }
 
 /* ─── ROOT ─────────────────────────────────────────────────── */
+const PASSWORD = import.meta.env.VITE_APP_PASSWORD as string;
+
 export default function PetHotelPlan() {
   const [lang, setLang] = useState<"fa" | "en">("fa");
   const [active, setActive] = useState("services");
+  const [passwordInput, setPasswordInput] = useState("");
+  const [authorized, setAuthorized] = useState(false);
+  const t = useT(lang);
   const isFa = lang === "fa";
   const tab = TABS.find(t => t.id === active);
+
+  useEffect(() => {
+    if (localStorage.getItem("petHotelUnlocked") === "true") {
+      setAuthorized(true);
+    }
+  }, []);
+
+  const handlePasswordSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (passwordInput === PASSWORD) {
+      setAuthorized(true);
+      localStorage.setItem("petHotelUnlocked", "true");
+      return;
+    }
+    alert("Password is incorrect. Try again.");
+    setPasswordInput("");
+  };
 
   const render = () => {
     const props = { lang };
@@ -945,12 +1078,68 @@ export default function PetHotelPlan() {
       case "services": return <ServicesSection  {...props} />;
       case "marketing": return <MarketingSection {...props} />;
       case "trust": return <TrustSection     {...props} />;
+      case "instagram": return <InstagramSection {...props} />;
       case "tasks": return <TasksSection     {...props} />;
       case "priority": return <PrioritySection  {...props} />;
       case "checklist": return <ChecklistSection {...props} />;
       default: return null;
     }
   };
+
+  if (!authorized) {
+    return (
+      <div style={{
+        minHeight: "100vh", background: C.bg,
+        fontFamily: F.enBody, direction: "ltr",
+        display: "flex", alignItems: "center", justifyContent: "center", padding: 24
+      }}>
+        <div style={{
+          width: "100%", maxWidth: 420, background: C.surface,
+          border: `1px solid ${C.borderSoft}`, borderRadius: 20,
+          padding: 32, boxShadow: "0 20px 60px rgba(0,0,0,0.08)"
+        }}>
+          <h1 style={{
+            fontFamily: F.enDisplay,
+            fontSize: 28, margin: 0, color: C.green
+          }}>
+            Page Locked
+          </h1>
+          <p style={{
+            fontFamily: F.enBody,
+            fontSize: 14, color: C.textMid, margin: "12px 0 24px", lineHeight: 1.7,
+            direction: "ltr", textAlign: "left"
+          }}>
+            Enter the password to continue.
+          </p>
+          <form onSubmit={handlePasswordSubmit} style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+            <input
+              type="password"
+              value={passwordInput}
+              onChange={(e) => setPasswordInput(e.target.value)}
+              placeholder="Password"
+              style={{
+                width: "100%", borderRadius: 12, border: `1px solid ${C.border}`,
+                padding: "14px 16px", fontSize: 14,
+                fontFamily: F.enBody, color: C.text
+              }}
+              autoFocus
+            />
+            <button
+              type="submit"
+              style={{
+                width: "100%", borderRadius: 12, padding: "14px 16px",
+                border: "none", background: C.green, color: "#fff",
+                fontFamily: F.enBody, fontWeight: 700,
+                cursor: "pointer", fontSize: 14
+              }}
+            >
+              Unlock
+            </button>
+          </form>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div style={{
@@ -995,7 +1184,9 @@ export default function PetHotelPlan() {
             ))}
           </div>
 
-          <div style={{ fontSize: 48, marginBottom: 16 }}>🐾</div>
+          <div style={{ marginBottom: 16, display: "flex", justifyContent: isFa ? "flex-end" : "flex-start" }}>
+            <img src={logoSrc} alt={t("لوگوی Paw Boutique", "Paw Boutique Logo")} style={{ width: 84, maxWidth: 120, height: "auto" }} />
+          </div>
           <h1 style={{
             fontFamily: isFa ? F.faDisplay : F.enDisplay,
             fontSize: "clamp(24px, 5vw, 36px)", fontWeight: 800,

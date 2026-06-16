@@ -534,7 +534,7 @@ const TABS = [
   { id: "marketing", icon: "📣", fa: "مارکتینگ", en: "Marketing", color: C.gold },
   { id: "trust", icon: "🛡️", fa: "اعتمادسازی", en: "Trust", color: C.blue },
   { id: "instagram", icon: "📱", fa: "اینستاگرام", en: "Instagram", color: C.purple },
-  { id: "ideas", icon: "💡", fa: "ایده‌های ناب", en: "Advanced Ideas", color: C.orange },
+  { id: "ideas", icon: "💡", fa: "ایده‌های جدید", en: "Advanced Ideas", color: C.orange },
   { id: "tasks", icon: "✅", fa: "وظایف تو", en: "Your Tasks", color: C.rose },
   { id: "priority", icon: "🎯", fa: "اولویت‌ها", en: "Priorities", color: C.purple },
   { id: "checklist", icon: "☑️", fa: "چک‌لیست", en: "Checklist", color: C.orange },
@@ -1118,7 +1118,7 @@ function PartnersSection({ lang }: { lang: "fa" | "en" }) {
                 <a href={"tel:" + c.phone} style={{ color: C.blue, textDecoration: "none" }}>{c.phone}</a>
               </p>
             ) : null;
-            
+
             const emailNode = c.email ? (
               <p style={{ margin: 0 }}>
                 ✉️ <strong>{t("ایمیل: ", "Email: ")}</strong>
@@ -1185,7 +1185,7 @@ function PartnersSection({ lang }: { lang: "fa" | "en" }) {
                 <a href={"tel:" + c.phone} style={{ color: C.blue, textDecoration: "none" }}>{c.phone}</a>
               </p>
             ) : null;
-            
+
             const hoursNode = c.hoursFa ? (
               <p style={{ margin: 0 }}>
                 🕒 <strong>{t("ساعت کاری: ", "Hours: ")}</strong>

@@ -295,16 +295,52 @@ const TASKS = [
     phase: "این هفته", phaseEn: "This Week", color: C.rose,
     items: [
       {
-        icon: "📸", fa: "عکاسی حرفه‌ای از محیط", en: "Professional Photos of the Venue",
-        descFa: "۲-۳ ساعت وقت بذار. هتل، گرومینگ، حیاط بازی، سگ‌ها. پایه همه چیزه.",
-        descEn: "Spend 2-3 hours. Hotel interior, grooming area, play yard, dogs. This is the foundation of everything.",
-        effort: "۲-۳ ساعت", effortEn: "2-3 hrs"
+        icon: "📱", fa: "ویرایش کپشن پست boarding (حذف برچسب‌های AI)", en: "Edit boarding post caption (Remove AI tags)",
+        descFa: "کپشن پست boarding که labelهای AI داره رو ویرایش کن و طبیعی بنویس.",
+        descEn: "Edit the boarding post caption that contains AI labels to make it feel natural.",
+        effort: "۵ دقیقه", effortEn: "5 min"
       },
       {
-        icon: "🗺️", fa: "راه‌اندازی Google Maps", en: "Set Up Google Maps",
-        descFa: "Google Business Profile کامل کن. لینک review مستقیم بگیر.",
-        descEn: "Complete Google Business Profile. Get the direct review link.",
+        icon: "🔗", fa: "تغییر لینک بیو به واتس‌اپ مستقیم", en: "Change bio link to direct WhatsApp",
+        descFa: "لینک بیو اینستاگرام رو از gmail به لینک مستقیم واتس‌اپ تغییر بده.",
+        descEn: "Change the bio link from Gmail to a direct WhatsApp chat link.",
+        effort: "۵ دقیقه", effortEn: "5 min"
+      },
+      {
+        icon: "📌", fa: "unpin کردن flyerها و pin کردن بهترین Reel", en: "Unpin flyers & pin best Reel",
+        descFa: "فلایرها رو از پین در بیار و بهترین ویدیوی ریل واقعی رو پین کن.",
+        descEn: "Unpin the flyers and pin the absolute best real guest dog Reel instead.",
+        effort: "۵ دقیقه", effortEn: "5 min"
+      },
+      {
+        icon: "💵", fa: "اضافه کردن هایلایت Pricing", en: "Add Pricing highlight",
+        descFa: "هایلایت استوری جدیدی برای لیست قیمت‌ها و پکیج‌ها بساز.",
+        descEn: "Create a new story highlight dedicated to pricing and packages.",
+        effort: "۱۵ دقیقه", effortEn: "15 min"
+      },
+      {
+        icon: "⭐", fa: "طراحی کاور هایلایت Our Reviews", en: "Design 'Our Reviews' highlight cover",
+        descFa: "یه کاور شیک و هماهنگ برای هایلایت نظرات مشتریان طراحی و ست کن.",
+        descEn: "Design and set a matching premium cover for 'Our Reviews' highlight.",
+        effort: "۱۵ دقیقه", effortEn: "15 min"
+      },
+      {
+        icon: "🗺️", fa: "تکمیل Google Business Profile", en: "Complete Google Business Profile",
+        descFa: "اطلاعات، ساعت کاری، خدمات و توضیحات گوگل مپس رو کامل کن.",
+        descEn: "Fill in all working hours, services, details, and keywords on Google Business.",
+        effort: "۳۰ دقیقه", effortEn: "30 min"
+      },
+      {
+        icon: "📸", fa: "آپلود ۱۰+ عکس واقعی از داخل هتل", en: "Upload 10+ real photos of the hotel",
+        descFa: "حداقل ۱۰ عکس باکیفیت و واقعی از بخش‌های مختلف داخل هتل در گوگل مپس آپلود کن.",
+        descEn: "Upload 10 or more high-quality real photos of the hotel interior and play area.",
         effort: "۱ ساعت", effortEn: "1 hr"
+      },
+      {
+        icon: "✉️", fa: "ارسال لینک مستقیم review به مشتریان قبلی", en: "Send direct review link to past clients",
+        descFa: "لینک مستقیم ثبت نظر گوگل مپس رو بردار و برای مشتری‌های قبلی بفرست.",
+        descEn: "Retrieve the direct Google review link and share it with previous clients via WhatsApp.",
+        effort: "۳۰ دقیقه", effortEn: "30 min"
       },
     ]
   },
@@ -312,31 +348,125 @@ const TASKS = [
     phase: "این ماه", phaseEn: "This Month", color: C.gold,
     items: [
       {
-        icon: "📅", fa: "تقویم محتوایی ماهانه", en: "Monthly Content Calendar",
-        descFa: "جدول ساده: چه روزی چه پستی. Reel سه‌شنبه‌ها، Story روزانه، پست آموزشی هر دو هفته.",
-        descEn: "Simple table: which day, which post. Reels on Tuesdays, daily Stories, educational post bi-weekly.",
+        icon: "📅", fa: "ساختن تقویم محتوایی ماهانه", en: "Create monthly content calendar",
+        descFa: "برنامه و موضوعات پست‌ها و استوری‌های کل ماه رو بنویس.",
+        descEn: "Map out the content schedule and topics for posts and stories for the entire month.",
         effort: "۲ ساعت", effortEn: "2 hrs"
       },
       {
-        icon: "💬", fa: "Template‌های واتس‌اپ", en: "WhatsApp Message Templates",
-        descFa: "۵ پیام آماده: خوش‌آمد، گزارش روزانه، بدرقه، درخواست review، تخفیف برگشت.",
-        descEn: "5 ready messages: welcome, daily report, farewell, review request, return discount.",
+        icon: "🐕", fa: "شروع Story روزانه از سگ‌های مهمان", en: "Start daily Stories of guest dogs",
+        descFa: "هر روز از بازی و استراحت سگ‌های مهمان استوری‌های شاد و واقعی بذار.",
+        descEn: "Post daily behind-the-scenes stories showing guest dogs playing and relaxing.",
+        effort: "۱۰ دقیقه/روز", effortEn: "10m/day"
+      },
+      {
+        icon: "✂️", fa: "ساخت اولین Reel قبل/بعد گرومینگ کامل", en: "Create first grooming Before/After Reel",
+        descFa: "یه ویدیوی جذاب از تغییر ظاهر سگ قبل و بعد از گرومینگ کامل درست کن.",
+        descEn: "Produce a transformation Reel showing a dog before and after a full grooming session.",
         effort: "۱ ساعت", effortEn: "1 hr"
       },
       {
-        icon: "🎨", fa: "طراحی Report Card", en: "Design the Report Card",
-        descFa: "توی Canva یه تمپلیت بساز: لوگو، عکس سگ، آمار روزانه. مشتری استوری میکنه.",
-        descEn: "Build a Canva template: logo, dog photo, daily stats. Customers will story it — free advertising.",
-        effort: "۲ ساعت", effortEn: "2 hrs"
+        icon: "📝", fa: "طراحی Report Card در Canva", en: "Design Report Card template in Canva",
+        descFa: "یه قالب قشنگ برای کارنامه روزانه سگ‌ها توی کانوا طراحی کن.",
+        descEn: "Design a customized daily report card template for dogs using Canva.",
+        effort: "۱ ساعت", effortEn: "1 hr"
       },
       {
-        icon: "🌐", fa: "لندینگ پیج ساده", en: "Simple Landing Page",
-        descFa: "حتی Wix کافیه. قیمت‌ها، پکیج‌ها، گالری، فرم رزرو.",
-        descEn: "Even Wix works fine. Prices, packages, photo gallery, booking form.",
-        effort: "۴-۵ ساعت", effortEn: "4-5 hrs"
+        icon: "💬", fa: "آماده کردن ۵ تا Template پیام واتساپ", en: "Prepare 5 WhatsApp message templates",
+        descFa: "پیام‌های آماده خوش‌آمد، گزارش روزانه، درخواست نظر و غیره رو آماده کن.",
+        descEn: "Draft 5 reusable templates: welcome, daily updates, checkout, review request, etc.",
+        effort: "۴۵ دقیقه", effortEn: "45 min"
+      },
+      {
+        icon: "📝", fa: "راه‌اندازی Google Form برای رزرو آنلاین", en: "Set up Google Form for online booking",
+        descFa: "یه فرم ساده و مشخص برای ثبت درخواست رزرو آنلاین مشتریان بساز.",
+        descEn: "Create a clear, simple Google Form for clients to submit online booking requests.",
+        effort: "۱ ساعت", effortEn: "1 hr"
+      },
+      {
+        icon: "📢", fa: "ساختن WhatsApp Broadcast List", en: "Create WhatsApp Broadcast List",
+        descFa: "لیست انتشار واتس‌اپ از مشتری‌های قبلی برای ارسال خبرنامه‌ها بساز.",
+        descEn: "Compile past clients into a WhatsApp Broadcast list for quick announcements.",
+        effort: "۳۰ دقیقه", effortEn: "30 min"
+      },
+      {
+        icon: "🎁", fa: "اعلام Referral Program (معرفی دوست = حمام رایگان)", en: "Announce Referral Program",
+        descFa: "طرح جدید معرف رو اعلام کن: معرفی هر مشتری جدید مساوی با یک حمام رایگان سگ خودشان.",
+        descEn: "Announce the referral program: recommend a friend and get a free dog bath.",
+        effort: "۳۰ دقیقه", effortEn: "30 min"
       },
     ]
   },
+  {
+    phase: "ماه دوم", phaseEn: "Month 2", color: C.green,
+    items: [
+      {
+        icon: "🌐", fa: "لندینگ پیج ساده (Wix یا React)", en: "Simple Landing Page (Wix or React)",
+        descFa: "یه لندینگ پیج ساده برای معرفی خدمات، گالری، قیمت‌ها و لینک‌های رزرو بساز.",
+        descEn: "Build a single-page site showing services, prices, gallery, and booking links.",
+        effort: "۴-۵ ساعت", effortEn: "4-5 hrs"
+      },
+      {
+        icon: "🎂", fa: "طراحی و اعلام Birthday Package", en: "Design & launch Birthday Package",
+        descFa: "پکیج تولد سگ شامل کیک مخصوص پت، تزیین و عکاسی رو معرفی کن.",
+        descEn: "Design and promote a special dog birthday package (pet cake, decorations, photos).",
+        effort: "۲ ساعت", effortEn: "2 hrs"
+      },
+      {
+        icon: "🏆", fa: "شروع کمپین Dog of the Month", en: "Launch 'Dog of the Month' campaign",
+        descFa: "کمپین معرفی سگ ماه و اهدای تشویقی/لوح یادبود رو آغاز کن.",
+        descEn: "Kick off the monthly dog spotlight award with custom treats or digital certificate.",
+        effort: "۱ ساعت", effortEn: "1 hr"
+      },
+      {
+        icon: "🤝", fa: "همکاری با ۲ میکرو اینفلوئنسر پت در KL", en: "Partner with 2 KL pet micro-influencers",
+        descFa: "با ۲ اینفلوئنسر محلی پت صحبت کن و در ازای خدمات رایگان، تبلیغ بگیر.",
+        descEn: "Connect with 2 local pet micro-influencers for content creation in exchange for stays.",
+        effort: "۳ ساعت", effortEn: "3 hrs"
+      },
+      {
+        icon: "📷", fa: "کمپین Pawparazzi (روز عکاسی حرفه‌ای)", en: "Pawparazzi Day (Professional Dog Photos)",
+        descFa: "یه روز عکاسی حرفه‌ای از سگ‌های هتل با عکاس حیوانات هماهنگ کن.",
+        descEn: "Organize a special day for professional pet portrait photography for guests.",
+        effort: "نصف روز", effortEn: "Half-day"
+      },
+    ]
+  },
+  {
+    phase: "ماه سوم", phaseEn: "Month 3", color: C.purple,
+    items: [
+      {
+        icon: "⚙️", fa: "سیستم رزرو آنلاین کامل", en: "Full Online Booking System",
+        descFa: "یک سیستم رزرواسیون و پرداخت آنلاین حرفه‌ای راه‌اندازی کن.",
+        descEn: "Integrate a comprehensive online booking, availability calendar, and payment system.",
+        effort: "۸-۱۰ ساعت", effortEn: "8-10 hrs"
+      },
+      {
+        icon: "👥", fa: "ساخت گروه WhatsApp Community", en: "Create WhatsApp Community group",
+        descFa: "جامعه مشتریان هتل رو در یک گروه واتس‌اپ بزرگ‌تر جمع کن.",
+        descEn: "Build a broader WhatsApp Community for pet owners to share updates and advice.",
+        effort: "۳۰ دقیقه", effortEn: "30 min"
+      },
+      {
+        icon: "🎯", fa: "راه‌اندازی تبلیغات Retargeting Ads", en: "Launch Retargeting Ads",
+        descFa: "تبلیغات هدف‌گیری مجدد برای کسانی که از سایت بازدید کرده‌اند اجرا کن.",
+        descEn: "Set up Facebook/Google retargeting pixels to reach previous website visitors.",
+        effort: "۳ ساعت", effortEn: "3 hrs"
+      },
+      {
+        icon: "🤖", fa: "ساخت Dog Personality AI Report", en: "Create Dog Personality AI Reports",
+        descFa: "یه گزارش طنز یا علمی با هوش مصنوعی درباره شخصیت سگ‌ها بعد از اقامت بساز.",
+        descEn: "Generate a fun or insightful AI personality scorecard for dogs after their stay.",
+        effort: "۴ ساعت", effortEn: "4 hrs"
+      },
+      {
+        icon: "🎉", fa: "رویداد Play Date ماهانه سگ‌ها", en: "Monthly Play Date Event",
+        descFa: "یه رویداد حضوری دورهمی سگ‌ها در هتل یا کافه‌های همکار برگزار کن.",
+        descEn: "Host a monthly socialization play date event for dog owners at the hotel or cafe.",
+        effort: "۴ ساعت", effortEn: "4 hrs"
+      },
+    ]
+  }
 ];
 
 const PRIORITY = [
@@ -352,66 +482,547 @@ const PRIORITY = [
 
 const CHECKLIST = [
   {
-    cat: "زیرساخت دیجیتال", catEn: "Digital Foundation", color: C.blue,
+    cat: "این هفته — فوری", catEn: "This Week - Immediate", color: C.rose,
     items: [
-      { id: "c1", fa: "Google Business Profile کامل راه‌اندازی شده", en: "Google Business Profile fully set up" },
-      { id: "c2", fa: "عکس‌های حرفه‌ای از محیط هتل گرفته شده", en: "Professional photos of the hotel taken" },
-      { id: "c3", fa: "لینک مستقیم Google Review گرفته شده", en: "Google Review direct link obtained" },
-      { id: "c4", fa: "لندینگ پیج یا وبسایت راه‌اندازی شده", en: "Landing page or website launched" },
-      { id: "c5", fa: "پیج اینستاگرام با هایلایت و بیو کامل", en: "Instagram page with full bio & highlights" },
+      { id: "tw1", fa: "ویرایش کپشن پست boarding (حذف برچسب‌های AI)", en: "Edit boarding post caption (Remove AI tags)" },
+      { id: "tw2", fa: "تغییر لینک بیو از gmail به واتساپ مستقیم", en: "Change bio link from Gmail to direct WhatsApp" },
+      { id: "tw3", fa: "unpin کردن flyerها، pin کردن بهترین Reel", en: "Unpin flyers, pin the best Reel" },
+      { id: "tw4", fa: "اضافه کردن هایلایت Pricing", en: "Add Pricing highlight" },
+      { id: "tw5", fa: "درست کردن کاور هایلایت «Our Reviews»", en: "Make cover highlight for 'Our Reviews'" },
+      { id: "tw6", fa: "تکمیل Google Business Profile", en: "Complete Google Business Profile" },
+      { id: "tw7", fa: "آپلود ۱۰+ عکس واقعی از داخل هتل", en: "Upload 10+ real photos of the hotel interior" },
+      { id: "tw8", fa: "گرفتن لینک review مستقیم و فرستادن به مشتریهای قبلی", en: "Send direct review link to past clients" },
     ]
   },
   {
-    cat: "مارکتینگ محتوا", catEn: "Content Marketing", color: C.gold,
+    cat: "این ماه — مهم", catEn: "This Month - Important", color: C.gold,
     items: [
-      { id: "c6", fa: "تقویم محتوایی ماهانه ساخته شده", en: "Monthly content calendar created" },
-      { id: "c7", fa: "اولین Reel قبل/بعد گرومینگ پست شده", en: "First before/after grooming Reel posted" },
-      { id: "c8", fa: "Story روزانه از داخل هتل شروع شده", en: "Daily Stories from inside the hotel started" },
-      { id: "c9", fa: "Template پیام‌های واتس‌اپ آماده شده", en: "WhatsApp message templates prepared" },
-      { id: "c10", fa: "اولین ۵ تا Google Review جمع‌آوری شده", en: "First 5 Google Reviews collected" },
+      { id: "tm1", fa: "ساختن تقویم محتوایی ماهانه", en: "Create monthly content calendar" },
+      { id: "tm2", fa: "شروع Story روزانه از سگهای مهمان", en: "Start daily Stories of guest dogs" },
+      { id: "tm3", fa: "ساختن اولین Reel before/after گرومینگ کامل", en: "Create first grooming Before/After Reel" },
+      { id: "tm4", fa: "طراحی Report Card در Canva", en: "Design Report Card template in Canva" },
+      { id: "tm5", fa: "آماده کردن ۵ تا Template پیام واتساپ", en: "Prepare 5 WhatsApp message templates" },
+      { id: "tm6", fa: "راهاندازی Google Form برای رزرو آنلاین", en: "Set up Google Form for online booking" },
+      { id: "tm7", fa: "ساختن WhatsApp Broadcast List از مشتریهای قبلی", en: "Create WhatsApp Broadcast List" },
+      { id: "tm8", fa: "اعلام Referral Program (معرفی دوست = حمام رایگان)", en: "Announce Referral Program (free bath)" },
     ]
   },
   {
-    cat: "خدمات جدید", catEn: "New Services", color: C.green,
+    cat: "ماه دوم — رشد", catEn: "Month 2 - Growth", color: C.green,
     items: [
-      { id: "c11", fa: "Daycare روزانه راه‌اندازی شده", en: "Daily Daycare launched" },
-      { id: "c12", fa: "Pet Taxi راه‌اندازی شده", en: "Pet Taxi service launched" },
-      { id: "c13", fa: "Live Camera برای مشتری‌ها فعال شده", en: "Live Camera activated for clients" },
-      { id: "c14", fa: "پکیج ترکیبی طراحی و اعلام شده", en: "Bundle package designed and announced" },
-      { id: "c15", fa: "سیستم گزارش روزانه واتس‌اپ شروع شده", en: "Daily WhatsApp report system started" },
+      { id: "m2_1", fa: "لندینگ پیج ساده (Wix یا React)", en: "Simple Landing Page (Wix or React)" },
+      { id: "m2_2", fa: "Birthday Package طراحی و اعلام کن", en: "Design & launch Birthday Package" },
+      { id: "m2_3", fa: "Dog of the Month کمپین شروع کن", en: "Start Dog of the Month campaign" },
+      { id: "m2_4", fa: "همکاری با ۲ میکرو اینفلوئنسر پت در KL", en: "Collaborate with 2 pet micro-influencers in KL" },
+      { id: "m2_5", fa: "Pawparazzi — یه روز عکاسی حرفهای از سگها", en: "Pawparazzi - professional dog photography day" },
     ]
   },
   {
-    cat: "اعتمادسازی", catEn: "Trust Building", color: C.rose,
+    cat: "ماه سوم — پیشرفته", catEn: "Month 3 - Advanced", color: C.purple,
     items: [
-      { id: "c16", fa: "همکاری با کلینیک دامپزشکی شروع شده", en: "Partnership with vet clinic started" },
-      { id: "c17", fa: "همکاری با پت‌شاپ محلی شروع شده", en: "Partnership with local pet shop started" },
-      { id: "c18", fa: "Report Card در Canva طراحی شده", en: "Report Card template designed in Canva" },
-      { id: "c19", fa: "پروتکل واکسیناسیون اعلام شده", en: "Vaccination protocol announced" },
-      { id: "c20", fa: "ویدیوی معرفی کارکنان پست شده", en: "Staff introduction video posted" },
+      { id: "m3_1", fa: "سیستم رزرو آنلاین کامل", en: "Full Online Booking System" },
+      { id: "m3_2", fa: "WhatsApp Community گروه بساز", en: "Create WhatsApp Community group" },
+      { id: "m3_3", fa: "Retargeting Ads راهانداز", en: "Launch Retargeting Ads" },
+      { id: "m3_4", fa: "Dog Personality AI Report بساز", en: "Create Dog Personality AI Report" },
+      { id: "m3_5", fa: "Play Date Event ماهانه", en: "Monthly Play Date Event" },
     ]
-  },
-  {
-    cat: "رشد و تبلیغات", catEn: "Growth & Ads", color: C.purple,
-    items: [
-      { id: "c21", fa: "اولین کمپین Instagram Ads اجرا شده", en: "First Instagram Ads campaign launched" },
-      { id: "c22", fa: "با ۲ میکرو اینفلوئنسر پت همکاری شده", en: "Collaborated with 2 pet micro-influencers" },
-      { id: "c23", fa: "Loyalty Card راه‌اندازی شده", en: "Loyalty Card system launched" },
-      { id: "c24", fa: "آفر تخفیف اولین اقامت اعلام شده", en: "First-stay discount offer announced" },
-      { id: "c25", fa: "بنر در مجتمع‌های مسکونی نصب شده", en: "Banner installed in residential complexes" },
-    ]
-  },
+  }
 ];
 
 const TABS = [
   { id: "services", icon: "🐾", fa: "خدمات جدید", en: "Services", color: C.green },
   { id: "marketing", icon: "📣", fa: "مارکتینگ", en: "Marketing", color: C.gold },
-  { id: "trust", icon: "🤝", fa: "اعتمادسازی", en: "Trust", color: C.blue },
+  { id: "trust", icon: "🛡️", fa: "اعتمادسازی", en: "Trust", color: C.blue },
   { id: "instagram", icon: "📱", fa: "اینستاگرام", en: "Instagram", color: C.purple },
   { id: "tasks", icon: "✅", fa: "وظایف تو", en: "Your Tasks", color: C.rose },
   { id: "priority", icon: "🎯", fa: "اولویت‌ها", en: "Priorities", color: C.purple },
   { id: "checklist", icon: "☑️", fa: "چک‌لیست", en: "Checklist", color: C.orange },
+  { id: "partners", icon: "🤝", fa: "شرکای محلی", en: "Local Partners", color: C.green }
 ];
+
+const PARTNERS_CLINICS = [
+  {
+    nameFa: "۱. کلینیک دامپزشکی Pet Haven ⭐",
+    nameEn: "1. Pet Haven Veterinary Clinic ⭐",
+    highlightFa: "نزدیک‌ترین به هتل — بهترین گزینه برای همکاری",
+    highlightEn: "Closest to hotel — Best candidate for partnership",
+    addressFa: "12, Ground Floor, Jalan 22B/70A, Desa Sri Hartamas, 50480 KL",
+    addressEn: "12, Ground Floor, Jalan 22B/70A, Desa Sri Hartamas, 50480 KL",
+    phone: "+6012 634 2007",
+    email: "vetspethaven@gmail.com",
+    hoursFa: "تماس بگیرید",
+    hoursEn: "Call to check",
+    servicesFa: "واکسیناسیون (vaccination)، عقیم‌سازی (neutering)، آزمایش خون (blood test)، طب سوزنی (acupuncture)",
+    servicesEn: "vaccination, neutering, blood test, acupuncture",
+    whyFa: "همین خیابون هتله — بهترین گزینه برای شروع همکار متقابل و معرفی کارت ویزیت.",
+    whyEn: "Located on the same street as the hotel — perfect for mutual cross-referral partnerships.",
+    color: C.green
+  },
+  {
+    nameFa: "۲. کلینیک دامپزشکی Ohana",
+    nameEn: "2. Ohana Veterinary Clinic & Surgery",
+    addressFa: "12, Jalan 22b/70A, Desa Sri Hartamas, 50480 KL",
+    addressEn: "12, Jalan 22b/70A, Desa Sri Hartamas, 50480 KL",
+    hoursFa: "روزهای هفته 9:30am-5pm، شنبه 9:30am-3:30pm",
+    hoursEn: "Weekdays 9:30am-5pm, Saturday 9:30am-3:30pm",
+    servicesFa: "آزمایش خون، سونوگرافی، دندان‌پزشکی، عقیم‌سازی، گرومینگ، بردینگ",
+    servicesEn: "blood test, ultrasound, dental, neutering, grooming, boarding",
+    whyFa: "دارای خدمات گرومینگ و بردینگ است (رقیب ملایم ولی مناسب برای همکارهای جانبی).",
+    whyEn: "Offers grooming and boarding as well. Gentle competitor but still good for peripheral referrals.",
+    color: C.gold
+  },
+  {
+    nameFa: "۳. کلینیک دامپزشکی Hartamas",
+    nameEn: "3. Hartamas Veterinary Clinic",
+    addressFa: "Plaza Crystalville 1, GF9, Jalan 23/70A, Desa Sri Hartamas, 50480 KL",
+    addressEn: "Plaza Crystalville 1, GF9, Jalan 23/70A, Desa Sri Hartamas, 50480 KL",
+    hoursFa: "تماس بگیرید",
+    hoursEn: "Call to check",
+    servicesFa: "خدمات درمانی عمومی دامپزشکی حیوانات خانگی",
+    servicesEn: "General pet healthcare and clinic services",
+    whyFa: "همین محله است — گزینه‌ای عالی برای گذاشتن کارت ویزیت و بروشور.",
+    whyEn: "Located in the same neighborhood — excellent option for leaving business cards.",
+    color: C.blue
+  },
+  {
+    nameFa: "۴. کلینیک دامپزشکی VPAC ⭐",
+    nameEn: "4. VPAC — Vets for Pets Animal Clinic ⭐",
+    highlightFa: "معروف‌ترین کلینیک منطقه — مشتریان بسیار وفادار",
+    highlightEn: "Most famous clinic in the area — highly loyal clients",
+    addressFa: "No. 5 (G floor), Jalan Solaris 4, Solaris Mont Kiara, 50480 KL",
+    addressEn: "No. 5 (G floor), Jalan Solaris 4, Solaris Mont Kiara, 50480 KL",
+    phone: "+6014 919 4980",
+    hoursFa: "دوشنبه تا جمعه 10am-1pm و 2pm-7pm، شنبه و یکشنبه 10am-3pm",
+    hoursEn: "Mon-Fri 10am-1pm & 2pm-7pm, Sat-Sun 10am-3pm",
+    servicesFa: "معاینات سلامت، میکروچیپ، مراقبت دندان، واکسیناسیون، بردینگ، گرومینگ",
+    servicesEn: "wellness examination, microchipping, dental care, vaccination, boarding, grooming",
+    whyFa: "معروف‌ترین کلینیک منطقه است و مشتری‌های وفادار زیادی دارد که می‌توان با یک آفر خاص جذبشان کرد.",
+    whyEn: "The most popular clinic in the district, yielding many loyal clients you can attract via special co-promotions.",
+    color: C.purple
+  }
+];
+
+const PARTNERS_CAFES = [
+  {
+    nameFa: "۱. کافه CuBs & CuPs ⭐",
+    nameEn: "1. CuBs & CuPs ⭐",
+    highlightFa: "بهترین گزینه برای همکاری (مخاطب ۱۰۰٪ هدف)",
+    highlightEn: "Best candidate for partnership (100% target audience)",
+    addressFa: "Lot 22, Wisma Rapid, Jalan 30/70A, Desa Sri Hartamas, KL",
+    addressEn: "Lot 22, Wisma Rapid, Jalan 30/70A, Desa Sri Hartamas, KL",
+    servicesFa: "منوی مخصوص سگ، فضای بازی سرپوشیده و باز، غذاهای کره‌ای و غربی",
+    servicesEn: "Special dog menu, indoor and outdoor play areas, Korean & Western food",
+    whyFa: "مستقیماً توی محله هتله و تمام مشتری‌هاش dog ownerها هستند. بهترین محل برای رویدادهای مشترک.",
+    whyEn: "Located directly in the hotel's neighborhood, catering exclusively to dog owners. Perfect for joint events.",
+    color: C.green
+  },
+  {
+    nameFa: "۲. کافه Bark-A-Bout",
+    nameEn: "2. Bark-A-Bout",
+    addressFa: "22, Jalan 30/70A, Desa Sri Hartamas, 50480 KL",
+    addressEn: "22, Jalan 30/70A, Desa Sri Hartamas, 50480 KL",
+    phone: "+6017 24 2495",
+    hoursFa: "وسط هفته 11:30am-9:30pm، آخر هفته 9:30am-10:30pm (چهارشنبه‌ها تعطیل)",
+    hoursEn: "Weekdays 11:30am-9:30pm, Weekends 9:30am-10:30pm (Closed Wednesdays)",
+    servicesFa: "استخر اختصاصی سگ، گرومینگ، فضای بازی",
+    servicesEn: "Dog swimming pool, grooming, play area",
+    whyFa: "دارای استخر و جامعه فعالی از پت‌اونرهاست. گزینه عالی برای رویدادهای آب‌بازی و تبلیغات متقابل.",
+    whyEn: "Features a dog pool and an active community. Great for pool event collaborations and cross-ads.",
+    color: C.gold
+  },
+  {
+    nameFa: "۳. کافه Kopenhagen Coffee ⭐",
+    nameEn: "3. Kopenhagen Coffee ⭐",
+    highlightFa: "پاتوق مشتریان Expat و حرفه‌ای",
+    highlightEn: "Expat & professional client hub",
+    addressFa: "Shoplot 7, Vista Kiara, 6-7, Jln Kiara 3, Mont Kiara, 50480 KL",
+    addressEn: "Shoplot 7, Vista Kiara, 6-7, Jln Kiara 3, Mont Kiara, 50480 KL",
+    phone: "03-6211 6363",
+    hoursFa: "دوشنبه تا جمعه 7am-4pm، شنبه و یکشنبه 8am-5pm",
+    hoursEn: "Mon-Fri 7am-4pm, Sat-Sun 8am-5pm",
+    servicesFa: "کافه pet-friendly با استایل مینیمالیستی اسکاندیناوی",
+    servicesEn: "Pet-friendly cafe, minimalist Scandinavian style",
+    whyFa: "پت‌فرندلی است و مشتری‌های خارجی و با درآمد بالا (Professional) زیادی به آن سر می‌زنند.",
+    whyEn: "Highly pet-friendly, attracting expat and high-income professional dog owners.",
+    color: C.blue
+  },
+  {
+    nameFa: "۴. کافه KoFi by 77",
+    nameEn: "4. KoFi by 77",
+    highlightFa: "ورود پت به داخل سالن آزاد است (کمیاب)",
+    highlightEn: "Pets welcomed indoors (Rare)",
+    addressFa: "Shoplot 7, Vista Kiara, 5, Jln Kiara 3, Mont Kiara, KL",
+    addressEn: "Shoplot 7, Vista Kiara, 5, Jln Kiara 3, Mont Kiara, KL",
+    phone: "03-6206 1020",
+    hoursFa: "دوشنبه تا جمعه 7:30am-4pm، شنبه و یکشنبه 8am-4:30pm",
+    hoursEn: "Mon-Fri 7:30am-4pm, Sat-Sun 8am-4:30pm",
+    servicesFa: "پذیرایی و منوی کافه‌ای، اجازه ورود پت به داخل سالن (Indoors welcome)",
+    servicesEn: "Cafe menu, pets welcomed indoors",
+    whyFa: "اجازه ورود سگ به داخل سالن سرپوشیده را می‌دهد که در مالزی کم‌یاب است و مشتریان صمیمی دارد.",
+    whyEn: "Rarely in KL, they allow dogs inside the air-conditioned area. Creates a very loyal local community.",
+    color: C.purple
+  },
+  {
+    nameFa: "۵. کافه Ra-Ft Café Mont Kiara",
+    nameEn: "5. Ra-Ft Café Mont Kiara",
+    addressFa: "G-17, Ground Level, Arcoris Plaza, 10, Jalan Kiara, Mont Kiara, 50480 KL",
+    addressEn: "G-17, Ground Level, Arcoris Plaza, 10, Jalan Kiara, Mont Kiara, 50480 KL",
+    phone: "03-6412 2127",
+    hoursFa: "دوشنبه تا جمعه 8am-5pm، شنبه و یکشنبه 8am-6pm",
+    hoursEn: "Mon-Fri 8am-5pm, Sat-Sun 9am-6pm",
+    servicesFa: "قهوه‌های تخصصی، صبحانه‌های عالی و محیط دوستدار حیوانات در فضای باز",
+    servicesEn: "Specialty coffee, great breakfast, outdoor pet-friendly seating",
+    whyFa: "واقع در مجتمع Arcoris Mont Kiara، محل تجمع افراد با پت‌های خانگی در روزهای تعطیل.",
+    whyEn: "Located in Arcoris Mont Kiara, a very popular weekend hub for local dog owners.",
+    color: C.orange
+  }
+];
+
+const PARTNERS_SHOPS = [
+  {
+    nameFa: "۱. پت‌شاپ Furball Haven ⭐",
+    nameEn: "1. Furball Haven ⭐",
+    highlightFa: "رقیب مستقیم و همکار بالقوه",
+    highlightEn: "Direct competitor & potential partner",
+    addressFa: "1-1, Jalan Solaris 4, Solaris Mont Kiara, 50480 KL",
+    addressEn: "1-1, Jalan Solaris 4, Solaris Mont Kiara, 50480 KL",
+    phone: "+6018 205 6330",
+    servicesFa: "گرومینگ (grooming)، بردینگ (boarding)، دی‌کر (daycare)، سرویس رفت و آمد (pick-up & drop-off)",
+    servicesEn: "grooming, boarding, daycare, pick-up & drop-off in Hartamas & Mont Kiara",
+    whyFa: "⚠️ رقیب مستقیم شماست ولی می‌توان روی خدمات متفاوت یا ظرفیت‌های سرریز باهم همکاری کرد.",
+    whyEn: "⚠️ Direct competitor, but potential for referral when either is fully booked or for distinct styling services.",
+    color: C.rose
+  },
+  {
+    nameFa: "۲. پت‌شاپ Doggie House",
+    nameEn: "2. Doggie House",
+    addressFa: "Desa Sri Hartamas, Kuala Lumpur",
+    addressEn: "Desa Sri Hartamas, Kuala Lumpur",
+    servicesFa: "وسایل حیوانات خانگی (pet supplies)، گرومینگ (grooming)",
+    servicesEn: "pet supplies, grooming",
+    whyFa: "پت‌شاپ محلی با فروش بالا؛ گزینه عالی برای گذاشتن کارت ویزیت و بنر کوچک معرفی هتل.",
+    whyEn: "Local supplies shop; great location to drop off pamphlets and business cards.",
+    color: C.gold
+  },
+  {
+    nameFa: "۳. پت‌شاپ Pet Lovers Centre",
+    nameEn: "3. Pet Lovers Centre",
+    addressFa: "1 Mont Kiara Mall, No 1, Jln Kiara 1",
+    addressEn: "1 Mont Kiara Mall, No 1, Jln Kiara 1",
+    servicesFa: "بزرگ‌ترین زنجیره پت‌شاپ در مالزی، فروش انواع برندهای معتبر غذا و لوازم سگ",
+    servicesEn: "Large pet shop chain, extensive supply of food, accessories, and health products",
+    whyFa: "بزرگ‌ترین زنجیره فروشگاهی پت در مالزی است. برای قرار دادن بروشورها در بردهای اعلانات مناسب است.",
+    whyEn: "Huge chain. Suitable for placing community brochures or advertising on public message boards.",
+    color: C.blue
+  }
+];
+
+const OUTREACH_SCRIPT = {
+  fa: `«سلام، من از پت هتل Paw Boutique در دسا سری هارتاماس تماس می‌گیرم. ما علاقه‌مندیم همکاری ساده‌ای در زمینه معرفی مشتری دوطرفه داشته باشیم — به این صورت که ما کلینیک/کافه شما را به مشتریانمان پیشنهاد می‌کنیم و شما هم در صورت نیاز، صاحبان پت را برای خدمات پانسیون و گرومینگ به ما معرفی کنید. این همکاری هیچ هزینه‌ای ندارد و صرفاً منفعت متقابل است. خوشحال می‌شیم اگر تمایل داشته باشید گفتگوی کوتاهی در این زمینه داشته باشیم.»`,
+  en: `“Hi, I'm from Paw Boutique Pet Hotel in Desa Sri Hartamas. We'd love to explore a simple cross-referral partnership — we recommend your clinic/cafe to our clients, and you can refer pet owners to us for boarding and grooming. No cost, just mutual benefit. Would you be open to a quick chat?”`
+};
+
+const PARTNERS_PRIORITY = [
+  { rank: 1, nameFa: "کلینیک Pet Haven Vet", nameEn: "Pet Haven Vet Clinic", locFa: "سری هارتاماس", locEn: "Desa Sri Hartamas", whyFa: "همین خیابون هتله — بهترین دسترسی", whyEn: "Same street as hotel — closest proximity" },
+  { rank: 2, nameFa: "کافه CuBs & CuPs", nameEn: "CuBs & CuPs Cafe", locFa: "سری هارتاماس", locEn: "Desa Sri Hartamas", whyFa: "دقیقاً پر از مخاطب سگ‌دار هدف", whyEn: "Full of target dog-owner clientele" },
+  { rank: 3, nameFa: "دامپزشکی VPAC Mont Kiara", nameEn: "VPAC Vet Clinic", locFa: "مونت کیارا", locEn: "Mont Kiara", whyFa: "معروف‌ترین کلینیک با مشتریان وفادار", whyEn: "Most famous clinic with high-loyalty base" },
+  { rank: 4, nameFa: "کافه Kopenhagen Coffee", nameEn: "Kopenhagen Coffee", locFa: "مونت کیارا", locEn: "Mont Kiara", whyFa: "مشتریان expat و صاحبان سگ با درآمد بالا", whyEn: "Expat & high-spending dog owners" },
+  { rank: 5, nameFa: "کافه Bark-A-Bout", nameEn: "Bark-A-Bout Cafe", locFa: "سری هارتاماس", locEn: "Desa Sri Hartamas", whyFa: "دارای استخر و جامعه فعال سگ‌ها", whyEn: "Has dog pool and active owner community" }
+];
+
+function PartnersSection({ lang }: { lang: "fa" | "en" }) {
+  const t = useT(lang);
+  const isFa = lang === "fa";
+  const [subTab, setSubTab] = useState<"clinics" | "cafes" | "shops" | "outreach">("clinics");
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyScript = () => {
+    const scriptText = isFa ? OUTREACH_SCRIPT.fa : OUTREACH_SCRIPT.en;
+    navigator.clipboard.writeText(scriptText);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+      {/* Sub-navigation */}
+      <div style={{
+        display: "flex", gap: 8, flexWrap: "wrap",
+        justifyContent: isFa ? "flex-end" : "flex-start",
+        borderBottom: `1px solid ${C.borderSoft}`, paddingBottom: 12
+      }}>
+        {[
+          { id: "clinics", fa: "🏥 کلینیک‌های دامپزشکی", en: "🏥 Vet Clinics" },
+          { id: "cafes", fa: "☕ کافه‌های پت‌فرندلی", en: "☕ Pet Cafes" },
+          { id: "shops", fa: "🛒 پت‌شاپ‌ها", en: "🛒 Pet Shops" },
+          { id: "outreach", fa: "📞 پیام و اولویت تماس", en: "📞 Outreach & Priority" }
+        ].map((st: any) => (
+          <button key={st.id} onClick={() => setSubTab(st.id as any)} style={{
+            background: subTab === st.id ? C.green : C.surfaceAlt,
+            border: `1px solid ${subTab === st.id ? C.green : C.border}`,
+            color: subTab === st.id ? "#fff" : C.textMid,
+            fontFamily: isFa ? F.faBody : F.enBody,
+            fontWeight: subTab === st.id ? 700 : 400, fontSize: 13,
+            borderRadius: 8, padding: "8px 16px", cursor: "pointer",
+            transition: "all 0.15s",
+          }}>
+            {t(st.fa, st.en)}
+          </button>
+        ))}
+      </div>
+
+      {/* Render Clinics */}
+      {subTab === "clinics" && (
+        <div style={{ display: "grid", gap: 16, gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))" }}>
+          {PARTNERS_CLINICS.map((c: any, i: number) => {
+            const phoneNode = c.phone ? (
+              <p style={{ margin: 0 }}>
+                📞 <strong>{t("تلفن: ", "Phone: ")}</strong>
+                <a href={"tel:" + c.phone} style={{ color: C.blue, textDecoration: "none" }}>{c.phone}</a>
+              </p>
+            ) : null;
+            
+            const emailNode = c.email ? (
+              <p style={{ margin: 0 }}>
+                ✉️ <strong>{t("ایمیل: ", "Email: ")}</strong>
+                <a href={"mailto:" + c.email} style={{ color: C.blue, textDecoration: "none" }}>{c.email}</a>
+              </p>
+            ) : null;
+
+            const hoursNode = c.hoursFa ? (
+              <p style={{ margin: 0 }}>
+                🕒 <strong>{t("ساعت کاری: ", "Hours: ")}</strong>
+                {t(c.hoursFa, c.hoursEn || "")}
+              </p>
+            ) : null;
+
+            return (
+              <SectionCard key={i} style={{ display: "flex", flexDirection: "column", height: "100%", justifyContent: "space-between" }}>
+                <div>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 8, marginBottom: 12 }}>
+                    <h3 style={{
+                      fontFamily: isFa ? F.faDisplay : F.enDisplay,
+                      fontSize: 18, fontWeight: 700, margin: 0, color: C.text,
+                      direction: isFa ? "rtl" : "ltr"
+                    }}>
+                      {isFa ? c.nameFa : c.nameEn}
+                    </h3>
+                    {c.highlightFa && (
+                      <span style={{
+                        fontFamily: isFa ? F.faBody : F.enBody, fontSize: 10, fontWeight: 700,
+                        color: c.color, background: c.color + "15", border: `1px solid ${c.color}35`,
+                        borderRadius: 4, padding: "2px 6px", whiteSpace: "nowrap"
+                      }}>
+                        {t(c.highlightFa, c.highlightEn)}
+                      </span>
+                    )}
+                  </div>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 8, fontSize: 13, color: C.textSoft, direction: isFa ? "rtl" : "ltr" }}>
+                    <p style={{ margin: 0 }}>📍 <strong>{t("آدرس: ", "Address: ")}</strong>{t(c.addressFa, c.addressEn)}</p>
+                    {phoneNode}
+                    {emailNode}
+                    {hoursNode}
+                    <p style={{ margin: 0 }}>🩺 <strong>{t("خدمات: ", "Services: ")}</strong>{t(c.servicesFa, c.servicesEn)}</p>
+                  </div>
+                </div>
+                <div style={{
+                  marginTop: 16, paddingTop: 12, borderTop: `1px dashed ${C.borderSoft}`,
+                  fontStyle: isFa ? "normal" : "italic", fontSize: 13, color: C.textMid,
+                  direction: isFa ? "rtl" : "ltr"
+                }}>
+                  💡 <strong>{t("چرا مهمه: ", "Why it's important: ")}</strong>{t(c.whyFa, c.whyEn)}
+                </div>
+              </SectionCard>
+            );
+          })}
+        </div>
+      )}
+
+      {/* Render Cafes */}
+      {subTab === "cafes" && (
+        <div style={{ display: "grid", gap: 16, gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))" }}>
+          {PARTNERS_CAFES.map((c: any, i: number) => {
+            const phoneNode = c.phone ? (
+              <p style={{ margin: 0 }}>
+                📞 <strong>{t("تلفن: ", "Phone: ")}</strong>
+                <a href={"tel:" + c.phone} style={{ color: C.blue, textDecoration: "none" }}>{c.phone}</a>
+              </p>
+            ) : null;
+            
+            const hoursNode = c.hoursFa ? (
+              <p style={{ margin: 0 }}>
+                🕒 <strong>{t("ساعت کاری: ", "Hours: ")}</strong>
+                {t(c.hoursFa, c.hoursEn || "")}
+              </p>
+            ) : null;
+
+            return (
+              <SectionCard key={i} style={{ display: "flex", flexDirection: "column", height: "100%", justifyContent: "space-between" }}>
+                <div>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 8, marginBottom: 12 }}>
+                    <h3 style={{
+                      fontFamily: isFa ? F.faDisplay : F.enDisplay,
+                      fontSize: 18, fontWeight: 700, margin: 0, color: C.text,
+                      direction: isFa ? "rtl" : "ltr"
+                    }}>
+                      {isFa ? c.nameFa : c.nameEn}
+                    </h3>
+                    {c.highlightFa && (
+                      <span style={{
+                        fontFamily: isFa ? F.faBody : F.enBody, fontSize: 10, fontWeight: 700,
+                        color: c.color, background: c.color + "15", border: `1px solid ${c.color}35`,
+                        borderRadius: 4, padding: "2px 6px", whiteSpace: "nowrap"
+                      }}>
+                        {t(c.highlightFa, c.highlightEn)}
+                      </span>
+                    )}
+                  </div>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 8, fontSize: 13, color: C.textSoft, direction: isFa ? "rtl" : "ltr" }}>
+                    <p style={{ margin: 0 }}>📍 <strong>{t("آدرس: ", "Address: ")}</strong>{t(c.addressFa, c.addressEn)}</p>
+                    {phoneNode}
+                    {hoursNode}
+                    <p style={{ margin: 0 }}>🍔 <strong>{t("خدمات: ", "Services: ")}</strong>{t(c.servicesFa, c.servicesEn)}</p>
+                  </div>
+                </div>
+                <div style={{
+                  marginTop: 16, paddingTop: 12, borderTop: `1px dashed ${C.borderSoft}`,
+                  fontStyle: isFa ? "normal" : "italic", fontSize: 13, color: C.textMid,
+                  direction: isFa ? "rtl" : "ltr"
+                }}>
+                  💡 <strong>{t("چرا مهمه: ", "Why it's important: ")}</strong>{t(c.whyFa, c.whyEn)}
+                </div>
+              </SectionCard>
+            );
+          })}
+        </div>
+      )}
+
+      {/* Render Pet Shops */}
+      {subTab === "shops" && (
+        <div style={{ display: "grid", gap: 16, gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))" }}>
+          {PARTNERS_SHOPS.map((c: any, i: number) => {
+            const phoneNode = c.phone ? (
+              <p style={{ margin: 0 }}>
+                📞 <strong>{t("تلفن: ", "Phone: ")}</strong>
+                <a href={"tel:" + c.phone} style={{ color: C.blue, textDecoration: "none" }}>{c.phone}</a>
+              </p>
+            ) : null;
+
+            return (
+              <SectionCard key={i} style={{ display: "flex", flexDirection: "column", height: "100%", justifyContent: "space-between" }}>
+                <div>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 8, marginBottom: 12 }}>
+                    <h3 style={{
+                      fontFamily: isFa ? F.faDisplay : F.enDisplay,
+                      fontSize: 18, fontWeight: 700, margin: 0, color: C.text,
+                      direction: isFa ? "rtl" : "ltr"
+                    }}>
+                      {isFa ? c.nameFa : c.nameEn}
+                    </h3>
+                    {c.highlightFa && (
+                      <span style={{
+                        fontFamily: isFa ? F.faBody : F.enBody, fontSize: 10, fontWeight: 700,
+                        color: c.color, background: c.color + "15", border: `1px solid ${c.color}35`,
+                        borderRadius: 4, padding: "2px 6px", whiteSpace: "nowrap"
+                      }}>
+                        {t(c.highlightFa, c.highlightEn)}
+                      </span>
+                    )}
+                  </div>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 8, fontSize: 13, color: C.textSoft, direction: isFa ? "rtl" : "ltr" }}>
+                    <p style={{ margin: 0 }}>📍 <strong>{t("آدرس: ", "Address: ")}</strong>{t(c.addressFa, c.addressEn)}</p>
+                    {phoneNode}
+                    <p style={{ margin: 0 }}>🛍️ <strong>{t("خدمات: ", "Services: ")}</strong>{t(c.servicesFa, c.servicesEn)}</p>
+                  </div>
+                </div>
+                <div style={{
+                  marginTop: 16, paddingTop: 12, borderTop: `1px dashed ${C.borderSoft}`,
+                  fontStyle: isFa ? "normal" : "italic", fontSize: 13, color: C.textMid,
+                  direction: isFa ? "rtl" : "ltr"
+                }}>
+                  💡 <strong>{t("چرا مهمه: ", "Why it's important: ")}</strong>{t(c.whyFa, c.whyEn)}
+                </div>
+              </SectionCard>
+            );
+          })}
+        </div>
+      )}
+
+      {/* Render Outreach & Priority */}
+      {subTab === "outreach" && (
+        <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+          {/* Script Box */}
+          <SectionCard style={{ background: C.surfaceAlt, border: `1px solid ${C.greenMid}40` }}>
+            <h3 style={{
+              fontFamily: isFa ? F.faDisplay : F.enDisplay,
+              fontSize: 18, color: C.green, margin: "0 0 12px 0",
+              textAlign: isFa ? "right" : "left"
+            }}>
+              {t("💬 پیام پیشنهادی برای تماس اول", "💬 Suggested Outreach Script")}
+            </h3>
+            <p style={{
+              fontFamily: isFa ? F.faBody : F.enBody,
+              fontSize: 14.5, color: C.text, lineHeight: 1.8, margin: "0 0 16px 0",
+              direction: isFa ? "rtl" : "ltr", textAlign: isFa ? "right" : "left",
+              whiteSpace: "pre-line"
+            }}>
+              {t(OUTREACH_SCRIPT.fa, OUTREACH_SCRIPT.en)}
+            </p>
+            <div style={{ display: "flex", justifyContent: isFa ? "flex-start" : "flex-end" }}>
+              <button onClick={handleCopyScript} style={{
+                background: C.green, color: "#fff", border: "none", borderRadius: 8,
+                padding: "10px 20px", fontFamily: isFa ? F.faBody : F.enBody,
+                fontWeight: 700, fontSize: 13, cursor: "pointer", transition: "all 0.2s"
+              }}>
+                {copied ? t("✅ کپی شد!", "✅ Copied!") : t("📋 کپی کردن پیام", "📋 Copy Script")}
+              </button>
+            </div>
+          </SectionCard>
+
+          {/* Priority Table */}
+          <SectionCard>
+            <h3 style={{
+              fontFamily: isFa ? F.faDisplay : F.enDisplay,
+              fontSize: 18, color: C.text, margin: "0 0 16px 0",
+              textAlign: isFa ? "right" : "left"
+            }}>
+              {t("🎯 اولویت تماس با همکاران محلی", "🎯 Partner Contact Priority")}
+            </h3>
+            <div style={{ overflowX: "auto" }}>
+              <table style={{
+                width: "100%", borderCollapse: "collapse",
+                fontFamily: isFa ? F.faBody : F.enBody, fontSize: 13.5,
+                direction: isFa ? "rtl" : "ltr", textAlign: isFa ? "right" : "left"
+              }}>
+                <thead>
+                  <tr style={{ borderBottom: `2px solid ${C.border}`, color: C.textMid }}>
+                    <th style={{ padding: "12px 8px", fontWeight: 700, width: 60, textAlign: isFa ? "right" : "left" }}>{t("اولویت", "Rank")}</th>
+                    <th style={{ padding: "12px 8px", fontWeight: 700, textAlign: isFa ? "right" : "left" }}>{t("نام همکار", "Partner Name")}</th>
+                    <th style={{ padding: "12px 8px", fontWeight: 700, textAlign: isFa ? "right" : "left" }}>{t("مکان", "Location")}</th>
+                    <th style={{ padding: "12px 8px", fontWeight: 700, textAlign: isFa ? "right" : "left" }}>{t("دلیل اولویت", "Priority Reason")}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {PARTNERS_PRIORITY.map((row: any, idx: number) => (
+                    <tr key={idx} style={{
+                      borderBottom: `1px solid ${C.borderSoft}`,
+                      background: idx % 2 === 0 ? "transparent" : C.surfaceAlt + "40"
+                    }}>
+                      <td style={{ padding: "12px 8px", fontFamily: F.enBody, fontWeight: 700, color: C.green }}>{row.rank}</td>
+                      <td style={{ padding: "12px 8px", fontWeight: 600, color: C.text }}>{t(row.nameFa, row.nameEn)}</td>
+                      <td style={{ padding: "12px 8px", color: C.textSoft }}>{t(row.locFa, row.locEn)}</td>
+                      <td style={{ padding: "12px 8px", color: C.textMid }}>{t(row.whyFa, row.whyEn)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </SectionCard>
+        </div>
+      )}
+    </div>
+  );
+}
 
 /* ─── SECTIONS ─────────────────────────────────────────────── */
 function ServicesSection({ lang }: { lang: "fa" | "en" }) {
@@ -1082,6 +1693,7 @@ export default function PetHotelPlan() {
       case "tasks": return <TasksSection     {...props} />;
       case "priority": return <PrioritySection  {...props} />;
       case "checklist": return <ChecklistSection {...props} />;
+      case "partners": return <PartnersSection  {...props} />;
       default: return null;
     }
   };

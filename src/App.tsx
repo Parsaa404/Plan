@@ -534,6 +534,7 @@ const TABS = [
   { id: "marketing", icon: "📣", fa: "مارکتینگ", en: "Marketing", color: C.gold },
   { id: "trust", icon: "🛡️", fa: "اعتمادسازی", en: "Trust", color: C.blue },
   { id: "instagram", icon: "📱", fa: "اینستاگرام", en: "Instagram", color: C.purple },
+  { id: "ideas", icon: "💡", fa: "ایده‌های ناب", en: "Advanced Ideas", color: C.orange },
   { id: "tasks", icon: "✅", fa: "وظایف تو", en: "Your Tasks", color: C.rose },
   { id: "priority", icon: "🎯", fa: "اولویت‌ها", en: "Priorities", color: C.purple },
   { id: "checklist", icon: "☑️", fa: "چک‌لیست", en: "Checklist", color: C.orange },
@@ -729,6 +730,342 @@ const PARTNERS_PRIORITY = [
   { rank: 4, nameFa: "کافه Kopenhagen Coffee", nameEn: "Kopenhagen Coffee", locFa: "مونت کیارا", locEn: "Mont Kiara", whyFa: "مشتریان expat و صاحبان سگ با درآمد بالا", whyEn: "Expat & high-spending dog owners" },
   { rank: 5, nameFa: "کافه Bark-A-Bout", nameEn: "Bark-A-Bout Cafe", locFa: "سری هارتاماس", locEn: "Desa Sri Hartamas", whyFa: "دارای استخر و جامعه فعال سگ‌ها", whyEn: "Has dog pool and active owner community" }
 ];
+
+const ADVANCED_IDEAS = [
+  {
+    catFa: "🚀 خدمات لوکس و راحتی", catEn: "Luxury & Convenience Services", color: C.purple,
+    items: [
+      {
+        icon: "🚐",
+        titleFa: "گرومینگ و اسپا سیار در محل (Mobile Grooming Van)",
+        titleEn: "Mobile Grooming & Spa Van",
+        descFa: "یک ون مجهز به وان شستشو، سشوار صنعتی و میز گرومینگ که مستقیماً می‌رود جلوی کندوهای مسکونی دسا سری هارتاماس یا مونت کیارا. وقتی ماشین با لوگوی شیک جلوی لابی پارک می‌کند، تمام صاحبان سگ در حال پیاده‌روی شما را می‌بینند — تبلیغ محیطی رایگان در قلب جامعه هدف.",
+        descEn: "A fully equipped van with wash tub, industrial dryer, and grooming table going directly to residential condo lobbies in Desa Sri Hartamas or Mont Kiara. When the branded van parks in front of a lobby, every dog owner in the building sees you — free ambient advertising inside your target community.",
+        bombFa: "صاحب پت نیازی ندارد سگ خیس یا کثیف را سوار ماشین خودش کند و دو بار مسیر رفت‌وبرگشت را در ترافیک KL طی کند.",
+        bombEn: "Pet owner doesn't need to put a wet or dirty dog in their own car and fight KL traffic twice for a round trip.",
+        tag: "High Impact"
+      },
+      {
+        icon: "🚕",
+        titleFa: "تاکسی اشتراکی آخر هفته به پارک (Weekend Park Shuttle)",
+        titleEn: "Weekend Park Shuttle",
+        descFa: "صاحبان سگ در KL عاشق بردن پت به پارک‌هایی مثل Desa ParkCity هستند، اما ترافیک و پارکینگ کلافه‌کننده است. یک سرویس شاتل آخر هفته راه‌اندازی کنید — سگ‌ها و صاحبانشان را از یک نقطه در هارتاماس سوار کنید، به پارک ببرید و برگردانید.",
+        descEn: "KL dog owners love taking pets to parks like Desa ParkCity, but traffic and parking are nightmares. Launch a weekend shuttle — pick up dogs and owners from a fixed Hartamas point, drive to the park and back.",
+        bombFa: "شما تبدیل به لیدر «جامعه صاحبان سگ» در منطقه می‌شوید و مستقیماً برای هتل و گرومینگ هم به سراغتان می‌آیند.",
+        bombEn: "You become the community leader for local dog owners, who naturally convert to hotel and grooming clients.",
+        tag: "Community Hub"
+      },
+      {
+        icon: "📦",
+        titleFa: "پکیج اکسپت‌ها: سفر بدون استرس (Expat's Peace of Mind)",
+        titleEn: "Expat's Peace of Mind Package",
+        descFa: "جامعه خارجی‌های مقیم مالزی (Mont Kiara / Hartamas) مدام سفر می‌روند و هیچ فامیلی ندارند که پت بگذارند. تضمین آپدیت روزانه به انگلیسی روان، سرویس رفت‌وبرگشت رایگان فرودگاهی برای اقامت‌های بالای ۵ شب، و دسترسی ۲۴ ساعته به دامپزشک آنکال.",
+        descEn: "Expats in Mont Kiara / Hartamas travel constantly with no family to leave pets with. Includes daily fluent English updates (photo + video), free airport pet taxi for stays over 5 nights, and 24-hour on-call vet access.",
+        bombFa: "این پکیج را در گروه‌های فیسبوک 'Expats in KL' و 'Mont Kiara Community' معرفی کنید — بازار پولسازی که رقبا کاملاً نادیده گرفته‌اند.",
+        bombEn: "Promote in 'Expats in KL' and 'Mont Kiara Community' Facebook groups — a lucrative market your competitors are completely ignoring.",
+        tag: "Premium Revenue"
+      },
+      {
+        icon: "🧼",
+        titleFa: "اشتراک ماهانه گرومینگ (Monthly Grooming Subscription)",
+        titleEn: "Monthly Grooming Subscription",
+        descFa: "به جای رزرو موردی، یک اشتراک ماهانه ثابت تعریف کنید: ۲ بار حمام و برس + ۱ بار گرومینگ کامل + کوتاهی ناخن رایگان. مزیت برای مشتری: ۱۵٪ الی ۲۰٪ ارزان‌تر + اولویت رزرو آخر هفته.",
+        descEn: "Instead of ad-hoc bookings, sell a fixed monthly subscription: 2 baths + 1 full groom + free nail trim. Client benefit: 15-20% cheaper than per-session + priority weekend slots.",
+        bombFa: "درآمد ماهیانه پایدار و قابل پیش‌بینی — می‌دانید هر ماه چقدر درآمد دارید، صرف نظر از اینکه مشتری تماس می‌گیرد یا نه.",
+        bombEn: "Stable, predictable monthly recurring revenue — you know exactly how much income you have each month.",
+        tag: "Recurring Revenue"
+      },
+      {
+        icon: "🎂",
+        titleFa: "پکیج VIP تولد سگ (The Paw-ty Birthday Package)",
+        titleEn: "Paw-ty Birthday VIP Package",
+        descFa: "اگر اقامت سگ با روز تولدش همزمان شد: کلاه تولد، کاپکیک Dog-friendly، دکور مینیاتوری عکاسی، و یک ویدیوی ادیت‌شده ۱۵ ثانیه‌ای از لحظه خوردن کیک برای صاحب پت.",
+        descEn: "If the dog's stay coincides with their birthday: birthday hat, dog-friendly cupcake, mini photo backdrop, and a 15-second edited video of the cake moment sent to the owner.",
+        bombFa: "صاحب پت قطعاً این ویدیو را در اینستاگرام استوری می‌کند و تمام دوستان سگ‌دارش با پیج شما آشنا می‌شوند.",
+        bombEn: "Pet owners WILL story this video and every dog-owning friend of theirs will discover your page — guaranteed organic reach.",
+        tag: "Viral + Upsell"
+      },
+    ]
+  },
+  {
+    catFa: "🥷 مارکتینگ چریکی و محلی", catEn: "Guerrilla & Local Marketing", color: C.rose,
+    items: [
+      {
+        icon: "🏷️",
+        titleFa: "کمپین دستمال گردن برند (The Grooming Bandana)",
+        titleEn: "The Branded Grooming Bandana",
+        descFa: "بعد از هر بار گرومینگ، یک دستمال گردن (Bandana) کوچک، ارزان ولی شیک و مینیمالیستی با رنگ برند به گردن سگ ببندید. روی آن نوشته شود: «من در Paw Boutique خوشتیپ شدم! 🐾»",
+        descEn: "After every grooming, tie a small, cheap but chic minimalist bandana in brand colors around the dog's neck. Text: 'I got styled at Paw Boutique! 🐾'",
+        bombFa: "سگ‌ها بعد از گرومینگ به پیاده‌روی می‌روند. صاحبان دیگر سگ‌ها در خیابان یا پارک فوری متوجه این دستمال شیک می‌شوند — بهترین بازاریابی دهان‌به‌دهان در دنیای واقعی.",
+        bombEn: "Dogs go for walks after grooming. Other dog owners on the street or park instantly notice the chic bandana — the best real-world word-of-mouth marketing you can buy for pennies.",
+        tag: "Free Marketing"
+      },
+      {
+        icon: "🦴",
+        titleFa: "بار تشویقی رایگان برای سگ‌های پیاده‌رو (Sidewalk Treat Bar)",
+        titleEn: "The Sidewalk Treat Bar",
+        descFa: "یک ظرف آب تمیز و یک شیشه شیک پر از تشویقی رایگان بیرون بگذارید با تابلوی مینیمال بامزه: «سگ خسته؟ اینجا یه تشویقی رایگان بزن! 🦴»",
+        descEn: "Place a clean water bowl and a stylish jar of free treats outside with a minimal cute sign: 'Tired pup? Free treat right here! 🦴'",
+        bombFa: "سگ‌ها حافظه مکانی فوق‌العاده‌ای دارند. دفعه بعد خودِ سگ بند قلاده را می‌کشد تا بیاید جلوی مغازه شما! این کار روی صاحب پت تأثیر عاطفی شدیدی می‌گذارد.",
+        bombEn: "Dogs have extraordinary location memory. Next time, the dog itself pulls the leash to come to your storefront! Creates a powerful emotional connection with the owner.",
+        tag: "Emotional Hook"
+      },
+      {
+        icon: "📱",
+        titleFa: "ربودن مخاطب اینستاگرام (Audience Hijacking)",
+        titleEn: "Local Audience Hijacking",
+        descFa: "پیج کافه‌های pet-friendly (مثل CuBs & CuPs) یا تگ لوکیشن پارک‌های سگ (مثل Desa ParkCity) را باز کنید. کسانی که زیر پست‌هاشون کامنت گذاشتند مشتری هدف ۱۰۰٪ شما هستند. کامنت‌های صمیمی و واقعی (نه رباتی) زیر پست‌های پت آن‌ها بگذارید.",
+        descEn: "Open pet-friendly cafe pages (like CuBs & CuPs) or dog park location tags (like Desa ParkCity). Those who commented are 100% your target clients. Leave genuine warm comments (NOT robotic ad comments) under their pet posts.",
+        bombFa: "این کار دایره مخاطبان محلی را بدون هزینه به شدت سریع بالا می‌برد — به جای منتظر ماندن برای الگوریتم، مستقیم سراغ مشتری‌های آماده بروید.",
+        bombEn: "This rapidly grows your local audience for free — instead of waiting for the algorithm, go directly to ready-to-buy customers.",
+        tag: "Zero Cost"
+      },
+      {
+        icon: "🚗",
+        titleFa: "بیلبورد متحرک روی ماشین سرویس (Branded Pet Taxi Wrap)",
+        titleEn: "The Branded Pet Taxi Billboard",
+        descFa: "روی ماشین سرویس رفت‌وبرگشت، یک Vinyl Wrap باکیفیت، فانتزی و مینیمالیستی بچسبانید. شعار: «سگ شما در راه رفتن به تعطیلات لوکس! 🐾 Paw Boutique» به همراه QR Code بزرگ و آدرس اینستاگرام.",
+        descEn: "Apply a high-quality minimalist vinyl wrap to the pet taxi car. Slogan: 'Your dog is heading to a luxury staycation! 🐾 Paw Boutique' + large QR code and Instagram handle.",
+        bombFa: "بازاریابی محیطی رایگان در سراسر خیابان‌های KL و Selangor — چشم‌ها در ترافیک‌های سنگین KL به شما می‌افتند.",
+        bombEn: "Free ambient marketing across KL and Selangor streets — eyes in heavy KL traffic fall directly on your brand every single trip.",
+        tag: "Ambient Ads"
+      },
+      {
+        icon: "📲",
+        titleFa: "استند QR ریویو روی کانتر (Instant Review Station)",
+        titleEn: "Counter QR Review Station",
+        descFa: "یک استند کوچک روی کانتر پذیرش بگذارید: «گرفتن ناخن رایگان یا یک تشویقی پریمیوم، در ازای ثبت نظر روی گوگل مپ در همین لحظه!» لینک مستقیم بخش ریویو را به صورت QR دربیاورید تا با یک اسکن، صفحه کامنت باز شود.",
+        descEn: "Place a small stand on the reception counter: 'Free nail trim or premium treat for leaving a Google review right now!' Turn the direct review link into a QR code so one scan opens the comment page.",
+        bombFa: "صاحبان پت تنبل‌تر از آن هستند که سرچ کنند — این کار نرخ گرفتن ریویو را ۵ برابر افزایش می‌دهد.",
+        bombEn: "Pet owners are too lazy to search manually — this multiplies your review acquisition rate by 5x.",
+        tag: "GMaps Boost"
+      },
+    ]
+  },
+  {
+    catFa: "🔥 محتوای ویروسی اینستاگرام و تیکتاک", catEn: "Viral Instagram & TikTok Content", color: C.gold,
+    items: [
+      {
+        icon: "🤫",
+        titleFa: "ریلز «نقد سگ‌ها از خدمات» (The Dog's Review)",
+        titleEn: "The Dog's Professional Review Reel",
+        descFa: "به جای اینکه شما از خودتان تعریف کنید، بگذارید سگ‌ها با صداگذاری Voice-over طنز و جدی شما را نقد کنند. مثال: سگی که ماساژ اسپا می‌گیرد، گوینده جدی می‌گوید: «خدمات عالی بود، اما فقط دو تا تشویقی مرغ گرفتم که برای یک سگ لایقِ من، کم بود. ۴ از ۵ ستاره می‌دم!»",
+        descEn: "Instead of self-promotion, let dogs critique you with funny formal Voice-over narration. Example: dog getting spa massage, serious narrator: 'Service was excellent, however I received only two chicken treats which for a dog of my caliber, was insufficient. 4 out of 5 stars.'",
+        bombFa: "لحن رسمی روی قیافه بامزه سگ‌ها تضاد خنده‌داری ایجاد می‌کند — این مدل ویدیوها به شدت دست‌به‌دست (Share) می‌شوند.",
+        bombEn: "Formal narration over funny dog faces creates hilarious contrast — these videos go massively viral through shares.",
+        tag: "Viral"
+      },
+      {
+        icon: "📸",
+        titleFa: "استند عکاسی «پاپاراتزی» (Pawparazzi Backdrop)",
+        titleEn: "Pawparazzi Photo Backdrop",
+        descFa: "یک دیوار کوچک با دکور مینیمال، شیک و نورپردازی عالی (مثل استودیوهای عکاسی مدلینگ) آماده کنید. وقتی صاحب سگ می‌آید تحویل بگیرد، سگ را آنجا بگذارید و یک عکس فوق‌العاده باکیفیت و Insta-worthy بگیرید و فوری بفرستید.",
+        descEn: "Set up a small wall with minimal decor, chic styling, and excellent lighting (like a modeling photography studio). When owners come for pickup, place the dog there and snap a stunning Insta-worthy photo to send immediately.",
+        bombFa: "صاحبان پت نمی‌توانند جلوی خودشان را بگیرند و این عکس‌های آتلیه‌ای را حتماً در استوری با تگ کردن پیج شما منتشر می‌کنند.",
+        bombEn: "Pet owners simply cannot resist posting these studio-quality photos in stories, always tagging your page — guaranteed free advertising every single pickup.",
+        tag: "Free Ads"
+      },
+      {
+        icon: "🎙️",
+        titleFa: "سری «اعترافات سگ‌ها» (Dog Confessions Series)",
+        titleEn: "Dog Confessions Video Series",
+        descFa: "یک سری ریلز بسازید: سگی که به دوربین زل زده، صدا می‌گوید: «امروز مامانم فکر کرد دلم براش تنگ شده، ولی راستش داشتم به تشویقی‌های گوشت اردک هتل فکر می‌کردم...🤫» سری «Dog Personality»: معرفی سگ‌های هتل با کاراکترهای خنده‌دار — تدی (لیدر گروه)، لوسی (دراماتیک)، بارنی (همیشه خواب).",
+        descEn: "Reel series: dog staring at camera, voice: 'Mom thought I missed her today, but honestly I was thinking about the hotel's duck treat snacks...🤫' Dog Personality series: introduce hotel dogs with funny profiles — Teddy (the leader), Lucy (the dramatic one), Barney (always sleeping).",
+        bombFa: "صاحبان سگ عاشق تگ کردن دوستانشان زیر این ویدیوها هستند — هر ویدیو ده‌ها تگ دست‌ساز رایگان می‌آورد.",
+        bombEn: "Dog owners love tagging their friends in these — each video organically brings dozens of free manual tags and new followers.",
+        tag: "Series Content"
+      },
+      {
+        icon: "🏷️",
+        titleFa: "تگ کردن مشتریان در استوری روزانه (Daily Story Tagging)",
+        titleEn: "Daily Story Client Tagging",
+        descFa: "وقتی استوری روزانه از بازی سگ‌ها می‌گذارید، حتماً آیدی اینستاگرام صاحب سگ را (حتی پنهان یا کوچک) در استوری قرار دهید. صاحبان پت به محض دیدن استوری از سگشان آن را ریپوست (Repost) می‌کنند.",
+        descEn: "When posting daily dog play Stories, always tag the dog owner's Instagram handle (even small or hidden). Pet owners immediately repost Stories featuring their own dog.",
+        bombFa: "تمام فالوورهای صاحب سگ — که بیشترشان سگ‌دار هم هستند — پیج شما را می‌بینند. Reach ارگانیک رایگان هر روز.",
+        bombEn: "All of the owner's followers — most of whom also own dogs — see your page. Free organic reach growth every single day.",
+        tag: "Organic Reach"
+      },
+      {
+        icon: "💬",
+        titleFa: "گزارش روزانه با Speech Bubble بامزه (Funny Daily Report)",
+        titleEn: "Funny Speech Bubble Daily Report",
+        descFa: "عکس روزانه‌ای که می‌فرستید را با یک فرمت ثابت و بامزه بفرستید: عکس سگ با یک بالن متن (Speech Bubble) از زبان خودش خطاب به صاحبش: «مامان/بابا، امروز با لوسی بازی کردم و تشویقی مرغ خوردم، اصلاً نگران من نباش!»",
+        descEn: "Send daily photos in a consistent funny format: dog photo with a Speech Bubble from their own perspective to the owner: 'Mom/Dad, I played with Lucy today and had chicken treats, don't worry about me at all!'",
+        bombFa: "صاحب سگ این عکس ادیت‌شده و بامزه را ۱۰۰٪ در استوری اینستاگرامش ریپوست می‌کند — تبلیغ رایگان و ارگانیک برای Paw Boutique.",
+        bombEn: "The owner will 100% repost this funny edited photo in their Instagram story — free, authentic organic advertising for Paw Boutique.",
+        tag: "Viral Format"
+      },
+    ]
+  },
+  {
+    catFa: "💎 وفاداری، اعتماد و سیستم‌سازی", catEn: "Loyalty, Trust & Systems", color: C.green,
+    items: [
+      {
+        icon: "🎫",
+        titleFa: "کلوپ سگ‌های VIP — کارت طلایی (Golden Paw Club)",
+        titleEn: "Golden Paw Club — VIP Card",
+        descFa: "یک کارت فیزیکی مشکی/طلایی شیک (مثل کارت‌های اعتباری لوکس) به مشتریان وفادار بدهید. روی کارت: «عضو رسمی کلوپ سگ‌های خوش‌شانس». آفر: هر ۵ بار گرومینگ = ۱ حمام رایگان + اولویت رزرو در چینیز نیوییر و کریسمس.",
+        descEn: "Give loyal customers a sleek physical black/gold card (like a luxury credit card). Text: 'Official Member of the Lucky Dogs Club'. Offer: Every 5 groomings = 1 free bath + priority booking for Chinese New Year & Christmas when everywhere is full.",
+        bombFa: "مشتری این کارت را در کیف پولش نگه می‌دارد و هر بار که آن را می‌بیند، یاد بیزنس شما می‌افتد — retention عالی.",
+        bombEn: "Clients keep this card in their wallet and think of your business every time they see it — excellent retention and top-of-mind awareness.",
+        tag: "Retention"
+      },
+      {
+        icon: "🤝",
+        titleFa: "کارت تخفیف دوطرفه معرفی دوست (Dual Referral Card)",
+        titleEn: "The Dual Referral Card",
+        descFa: "یک کارت تخفیف دوطرفه طراحی کنید. به مشتری فعلی بگویید: «این کارت رو بده به یکی از دوستات که سگ داره. هم اون برای اولین گرومینگش ۲۰٪ تخفیف می‌گیره، هم به محض اینکه اون بیاد، گرومینگ بعدی سگ خودت نیمه‌بها حساب می‌شه.»",
+        descEn: "Design a dual-sided discount card. Tell current client: 'Give this to a dog-owning friend. They get 20% off their first grooming, and the moment they visit, your next grooming is half price.'",
+        bombFa: "قوی‌ترین سیستم جذب مشتری در دنیای پت — صاحبان سگ در پارک‌ها جامعه دارند و به توصیه هم اعتماد می‌کنند.",
+        bombEn: "The strongest client acquisition system in the pet world — dog owners form communities in parks and trust each other's recommendations more than any ad.",
+        tag: "Acquisition"
+      },
+      {
+        icon: "🩺",
+        titleFa: "نشان تأییدیه دامپزشک همکار (Vet-Approved Badge)",
+        titleEn: "Official Vet-Approved Safety Badge",
+        descFa: "با یکی از کلینیک‌های تاپ (VPAC یا Pet Haven) هماهنگ کنید که پروتکل‌های بهداشتی هتل را یک‌بار بازبینی کنند. پس از تأیید، بنر دیجیتال در سایت و هایلایت اینستاگرام بگذارید: «پروتکل‌های بهداشتی Paw Boutique تحت نظارت و تأیید کلینیک [نام کلینیک] می‌باشد.»",
+        descEn: "Coordinate with a top clinic (VPAC or Pet Haven) to review hotel hygiene protocols once. After approval, display a digital badge: 'Paw Boutique safety protocols approved and supervised by [Clinic Name].'",
+        bombFa: "این کار سطح اعتبار شما را از یک پت‌شاپ معمولی به یک مرکز کاملاً تخصصی و علمی ارتقا می‌دهد — بزرگ‌ترین ترس صاحبان پت از بین می‌رود.",
+        bombEn: "Elevates you from a regular pet shop to a fully certified professional center — eliminates the pet owner's biggest fear of their dog getting sick during the stay.",
+        tag: "Trust Builder"
+      },
+      {
+        icon: "📋",
+        titleFa: "فرم آنبوردینگ «داستان زندگی پت من» (Pet Life Story Form)",
+        titleEn: "Pet Life Story Onboarding Form",
+        descFa: "یک گوگل‌فرم شیک بسازید که صاحب پت قبل از پذیرش پر کند. سوالات نه فقط پزشکی، بلکه رفتار روحی سگ: «سگ شما از چه صدایی می‌ترسد؟»، «کدام قسمت بدنش را دوست دارد ماساژ دهید؟»، «وقتی لجبازی می‌کند چه چیزی آرامش می‌کند؟»",
+        descEn: "Build a sleek Google Form owners complete before check-in. Questions go beyond medical — they explore emotional behavior: 'What sounds is your dog afraid of?', 'Which body part do they love being massaged?', 'What calms them down when stubborn?'",
+        bombFa: "صاحب پت با دیدن این سوالات می‌فهمد که شما قرار است مانند فرزند خودش از سگش مراقبت کنید، نه فقط آب و غذا بدهید — اعتماد عمیق فوری.",
+        bombEn: "Seeing these questions, the owner realizes you'll care for their dog like their own child, not just feed and water them — instant deep trust.",
+        tag: "Deep Trust"
+      },
+      {
+        icon: "🤖",
+        titleFa: "سیستم CRM ساده: تبریک تولد سگ (WhatsApp Birthday CRM)",
+        titleEn: "Simple WhatsApp Birthday CRM",
+        descFa: "تاریخ تولد هر سگ را یادداشت کنید. یک هفته قبل از تولد پیام بفرستید: «سلام [نام صاحب]! هفته دیگه [اسم سگ] ۳ ساله می‌شه 🎉 می‌خواید یه پکیج تولد VIP رزرو کنید؟» ساده‌ترین ابزار CRM بدون هیچ هزینه‌ای.",
+        descEn: "Record every dog's birthday. One week before, send: 'Hi [Owner Name]! Next week [Dog Name] turns 3! 🎉 Would you like to book our Birthday VIP Package?' The simplest CRM tool with zero cost.",
+        bombFa: "این پیام نرخ تبدیل فوق‌العاده بالایی دارد — کسی نمی‌تواند برای تولد پتش نه بگوید!",
+        bombEn: "This message has an incredibly high conversion rate — nobody can say no to celebrating their pet's birthday!",
+        tag: "CRM"
+      },
+      {
+        icon: "🌐",
+        titleFa: "میکرو اینفلوئنسر — تبادل ارزش (Dog Influencer Value Exchange)",
+        titleEn: "Dog Influencer Value Exchange",
+        descFa: "پیج‌هایی در KL با ۳k-10k فالوور که فقط برای سگشان پیج زده‌اند (Dog Influencers) را پیدا کنید. ۱ یا ۲ شب اقامت کاملاً رایگان + یک جلسه گرومینگ VIP هدیه بدهید. در عوض: حداقل ۳ استوری از محیط و پرسنل، و ۱ Collaborative Post با پیج شما.",
+        descEn: "Find KL pages with 3k-10k followers running exclusively for their dog (Dog Influencers). Gift 1-2 nights fully free stay + VIP grooming session. In return: minimum 3 Stories of the space and staff, plus 1 Collaborative Post with your page.",
+        bombFa: "بک‌لینک و سیگنال‌های محلی اینستاگرام بدون پرداخت هزینه‌های سنگین به اینفلوئنسرهای بزرگ.",
+        bombEn: "Instagram local signals and authentic backlinks without paying heavy fees to large influencers — the value exchange is perfectly balanced.",
+        tag: "Collaboration"
+      },
+    ]
+  },
+];
+
+
+function AdvancedIdeasSection({ lang }: { lang: "fa" | "en" }) {
+  const t = useT(lang);
+  const isFa = lang === "fa";
+  const [activeCategory, setActiveCategory] = useState(0);
+
+  const cat = ADVANCED_IDEAS[activeCategory];
+
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+      {/* Intro */}
+      <SectionCard style={{ background: C.orangeLight, border: `1px solid ${C.orange}40` }}>
+        <p style={{
+          fontFamily: isFa ? F.faBody : F.enBody,
+          fontSize: 14, color: C.text, margin: 0, lineHeight: 1.8,
+          direction: isFa ? "rtl" : "ltr", textAlign: isFa ? "right" : "left"
+        }}>
+          💡 {t(
+            "این بخش شامل ایده‌های پیشرفته‌ای است که برای رشد سریع Paw Boutique طراحی شده‌اند. هر ایده یک «مارکتینگ بمب» دارد که توضیح می‌دهد چرا کار می‌کند.",
+            "This section contains advanced ideas designed for rapid Paw Boutique growth. Each idea has a 'Marketing Bomb' explaining exactly why it works."
+          )}
+        </p>
+      </SectionCard>
+
+      {/* Category tabs */}
+      <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+        {ADVANCED_IDEAS.map((cat, i) => (
+          <button key={i} onClick={() => setActiveCategory(i)} style={{
+            background: activeCategory === i ? cat.color : "transparent",
+            border: `2px solid ${cat.color}`,
+            color: activeCategory === i ? "#fff" : cat.color,
+            fontFamily: isFa ? F.faBody : F.enBody,
+            fontWeight: 700, fontSize: 12.5, padding: "8px 16px",
+            borderRadius: 20, cursor: "pointer", transition: "all 0.2s",
+            whiteSpace: "nowrap"
+          }}>
+            {isFa ? cat.catFa : cat.catEn}
+          </button>
+        ))}
+      </div>
+
+      {/* Ideas grid */}
+      <div style={{ display: "grid", gap: 16, gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))" }}>
+        {cat.items.map((item: any, i: number) => (
+          <SectionCard key={i} style={{ display: "flex", flexDirection: "column", gap: 12, position: "relative", overflow: "hidden" }}>
+            {/* Top color accent */}
+            <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: cat.color }} />
+
+            {/* Header */}
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", paddingTop: 4 }}>
+              <span style={{ fontSize: 28 }}>{item.icon}</span>
+              <span style={{
+                fontFamily: F.enBody, fontSize: 10, fontWeight: 700, letterSpacing: "0.06em",
+                textTransform: "uppercase", color: cat.color, background: cat.color + "18",
+                border: `1px solid ${cat.color}40`, borderRadius: 4, padding: "2px 8px", whiteSpace: "nowrap"
+              }}>{item.tag}</span>
+            </div>
+
+            {/* Title */}
+            <div style={{
+              fontFamily: isFa ? F.faBody : F.enDisplay,
+              fontSize: 15, fontWeight: 700, color: C.text,
+              direction: isFa ? "rtl" : "ltr", textAlign: isFa ? "right" : "left",
+              fontStyle: isFa ? "normal" : "italic"
+            }}>
+              {t(item.titleFa, item.titleEn)}
+            </div>
+
+            {/* Description */}
+            <div style={{
+              fontFamily: isFa ? F.faBody : F.enBody,
+              fontSize: 13, color: C.textSoft, lineHeight: 1.85,
+              direction: isFa ? "rtl" : "ltr", textAlign: isFa ? "right" : "left"
+            }}>
+              {t(item.descFa, item.descEn)}
+            </div>
+
+            {/* Marketing Bomb */}
+            <div style={{
+              marginTop: 4, padding: "10px 14px",
+              background: cat.color + "10", border: `1px solid ${cat.color}30`,
+              borderRadius: 8, direction: isFa ? "rtl" : "ltr"
+            }}>
+              <span style={{
+                fontFamily: isFa ? F.faBody : F.enBody,
+                fontSize: 12.5, color: cat.color, fontWeight: 700
+              }}>
+                💥 {t("مارکتینگ بمب: ", "Marketing Bomb: ")}
+              </span>
+              <span style={{
+                fontFamily: isFa ? F.faBody : F.enBody,
+                fontSize: 12.5, color: C.textMid, lineHeight: 1.7
+              }}>
+                {t(item.bombFa, item.bombEn)}
+              </span>
+            </div>
+          </SectionCard>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function PartnersSection({ lang }: { lang: "fa" | "en" }) {
   const t = useT(lang);
@@ -1690,6 +2027,7 @@ export default function PetHotelPlan() {
       case "marketing": return <MarketingSection {...props} />;
       case "trust": return <TrustSection     {...props} />;
       case "instagram": return <InstagramSection {...props} />;
+      case "ideas": return <AdvancedIdeasSection {...props} />;
       case "tasks": return <TasksSection     {...props} />;
       case "priority": return <PrioritySection  {...props} />;
       case "checklist": return <ChecklistSection {...props} />;
